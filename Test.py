@@ -1,1 +1,3 @@
-Print "Test By Rizwan"
+if(print("Hello World!")):
+    pass
+    
