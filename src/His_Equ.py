@@ -1,9 +1,13 @@
 import cv2
 import numpy as np
-img = cv2.imread('img/inp_4.jpg',0)
-equ = cv2.equalizeHist(img)
-res = np.hstack((img,equ)) #stacking images side-by-side
-cv2.imwrite('img/out_4.jpg',res)
+
+
+for i in range(2,13):
+	img = cv2.imread('img/inp_' + str(i) + '.jpg',0)
+	equ = cv2.equalizeHist(img)
+	res = np.hstack((img,equ)) #stacking images side-by-side
+	cv2.imwrite('img/out_' + str(i) + '.jpg',res)
+
 
 
 def splitfn(fn):
